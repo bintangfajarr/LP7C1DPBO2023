@@ -184,6 +184,8 @@ public class Game extends Canvas implements Runnable
             g.drawString("move Score : " + Integer.toString(score), 20, 30);
             g.setColor(Color.blue);
             g.drawString("eat Score : " + Integer.toString(skor2), 20, 50);
+            g.setColor(Color.blue);
+            g.drawString("total Score : " + Integer.toString(skor2+score), 20, 70);
             
         }
         
@@ -231,7 +233,7 @@ public class Game extends Canvas implements Runnable
                 }
             }
          if(handler.collision(player, enemy)){
-             skor2++;
+             skor2+=10;
              enemy.setRandom(width,height);
          }
         }
